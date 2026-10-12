@@ -4,3 +4,8 @@ runs/
 checkpoints/
 *.pth
 *.pt
+
+# Local review notes and generated validation records.
+PAPER_ALIGNMENT.md
+修改说明.md
+validation/
