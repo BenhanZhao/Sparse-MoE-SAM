@@ -1,0 +1,47 @@
+Validation date: 2026-10-13 (Asia/Shanghai)
+Command: python -X utf8 -m unittest discover -s tests -v
+
+test_cli_output_and_constructor_do_not_load_weights_or_execute (test_model_audit.ModelAudit.test_cli_output_and_constructor_do_not_load_weights_or_execute) ... ok
+test_missing_optional_components_are_reported_as_unknown (test_model_audit.ModelAudit.test_missing_optional_components_are_reported_as_unknown) ... ok
+test_parameter_counts_are_real_partitioned_and_frozen (test_model_audit.ModelAudit.test_parameter_counts_are_real_partitioned_and_frozen) ... ok
+test_report_preserves_unresolved_claims_and_actual_settings (test_model_audit.ModelAudit.test_report_preserves_unresolved_claims_and_actual_settings) ... ok
+test_sha256_tracks_source_bytes_and_excludes_environment (test_model_audit.ModelAudit.test_sha256_tracks_source_bytes_and_excludes_environment) ... ok
+test_tied_parameters_are_not_double_counted (test_model_audit.ModelAudit.test_tied_parameters_are_not_double_counted) ... ok
+test_aspp_singleton_and_noncentral_dilation_gradients (test_repairs.Repairs.test_aspp_singleton_and_noncentral_dilation_gradients) ... ok
+test_attention_matches_masked_reference_and_exact_zeros (test_repairs.Repairs.test_attention_matches_masked_reference_and_exact_zeros) ... ok
+test_checkpoint_adaptation_and_strict_reload (test_repairs.Repairs.test_checkpoint_adaptation_and_strict_reload) ... ok
+test_clustering_padding_all_empty_and_trainable_block (test_repairs.Repairs.test_clustering_padding_all_empty_and_trainable_block) ... ok
+test_deeplab_ablation_singleton_training_and_dynamic_size (test_repairs.Repairs.test_deeplab_ablation_singleton_training_and_dynamic_size) ... ok
+test_empty_metrics_and_loss_numerics (test_repairs.Repairs.test_empty_metrics_and_loss_numerics) ... ok
+test_gumbel_straight_through_hard_forward_and_soft_gradients (test_repairs.Repairs.test_gumbel_straight_through_hard_forward_and_soft_gradients) ... ok
+test_masks_manifest_groups_and_paired_resize (test_repairs.Repairs.test_masks_manifest_groups_and_paired_resize) ... ok
+test_moe_batch_one_dispatch_and_weight_normalization (test_repairs.Repairs.test_moe_batch_one_dispatch_and_weight_normalization) ... ok
+test_moe_spatial_routes_and_balance_gradients (test_repairs.Repairs.test_moe_spatial_routes_and_balance_gradients) ... ok
+test_package_import_and_native_sam_prediction (test_repairs.Repairs.test_package_import_and_native_sam_prediction) ... ok
+test_predicted_distance_sign_and_empty_full_cases (test_repairs.Repairs.test_predicted_distance_sign_and_empty_full_cases) ... ok
+test_sam_attention_relative_positions_matches_upstream (test_repairs.Repairs.test_sam_attention_relative_positions_matches_upstream) ... ok
+test_sam_end_to_end_singleton_dynamic_size_and_freeze (test_repairs.Repairs.test_sam_end_to_end_singleton_dynamic_size_and_freeze) ... ok
+test_selected_patch_convolutions_match_dense (test_repairs.Repairs.test_selected_patch_convolutions_match_dense) ... ok
+test_stage_temperatures_balance_and_optimizer_ownership (test_repairs.Repairs.test_stage_temperatures_balance_and_optimizer_ownership) ... ok
+test_training_entry_checkpoint_evaluation_and_resume (test_repairs.Repairs.test_training_entry_checkpoint_evaluation_and_resume) ... Device: cpu; parameters: 1,023,084
+Epoch 1/2 train=1.4001 val Dice=0.5876 IoU=0.4160
+Epoch 2/2 train=1.3865 val Dice=0.5693 IoU=0.3979
+Test: {"loss": 1.3129373788833618, "iou": 0.2995270625328429, "miou": 0.460739141022519, "dice": 0.46097856854023456, "precision": 0.39337474120082816, "recall": 0.556640625, "balance": 0.14651690423488617, "sparse": 0.9999999403953552, "gate_entropy": 1.1895204782485962, "attention_entropy": 3.439591407775879, "usage_stage1": [0.05078125, 0.08984375, 1.0, 0.859375], "usage_stage2": [0.20703125, 0.9091796875, 0.8837890625]}
+Device: cpu; parameters: 1,023,084
+Test: {"loss": 1.3129373788833618, "iou": 0.2995270625328429, "miou": 0.460739141022519, "dice": 0.46097856854023456, "precision": 0.39337474120082816, "recall": 0.556640625, "balance": 0.14651690423488617, "sparse": 0.9999999403953552, "gate_entropy": 1.1895204782485962, "attention_entropy": 3.439591407775879, "usage_stage1": [0.05078125, 0.08984375, 1.0, 0.859375], "usage_stage2": [0.20703125, 0.9091796875, 0.8837890625]}
+Device: cpu; parameters: 1,023,084
+Test: {"loss": 1.3129373788833618, "iou": 0.2995270625328429, "miou": 0.460739141022519, "dice": 0.46097856854023456, "precision": 0.39337474120082816, "recall": 0.556640625, "balance": 0.14651690423488617, "sparse": 0.9999999403953552, "gate_entropy": 1.1895204782485962, "attention_entropy": 3.439591407775879, "usage_stage1": [0.05078125, 0.08984375, 1.0, 0.859375], "usage_stage2": [0.20703125, 0.9091796875, 0.8837890625]}
+Device: cpu; parameters: 1,023,084
+Epoch 2/2 train=1.3865 val Dice=0.5693 IoU=0.3979
+Test: {"loss": 1.3129373788833618, "iou": 0.2995270625328429, "miou": 0.460739141022519, "dice": 0.46097856854023456, "precision": 0.39337474120082816, "recall": 0.556640625, "balance": 0.14651690423488617, "sparse": 0.9999999403953552, "gate_entropy": 1.1895204782485962, "attention_entropy": 3.439591407775879, "usage_stage1": [0.05078125, 0.08984375, 1.0, 0.859375], "usage_stage2": [0.20703125, 0.9091796875, 0.8837890625]}
+Device: cpu; parameters: 1,023,084
+Epoch 1/2 train=1.4001 val Dice=0.5855 IoU=0.4139
+Device: cpu; parameters: 1,023,084
+Epoch 2/2 train=1.3865 val Dice=0.5679 IoU=0.3966
+Test: {"loss": 1.3119107484817505, "iou": 0.30890880337374804, "miou": 0.46770226493473727, "dice": 0.4720096657269432, "precision": 0.4016449623029472, "recall": 0.572265625, "balance": 0.1487148106098175, "sparse": 0.9999999403953552, "gate_entropy": 1.1894893646240234, "attention_entropy": 3.439596176147461, "usage_stage1": [0.05078125, 0.08203125, 1.0, 0.8671875], "usage_stage2": [0.2041015625, 0.9111328125, 0.884765625]}
+ok
+
+----------------------------------------------------------------------
+Ran 23 tests in 4.908s
+
+OK

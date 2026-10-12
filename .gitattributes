@@ -1,0 +1,9 @@
+# Keep source fingerprints stable across Windows and Linux checkouts.
+*.py text eol=lf
+*.md text eol=lf
+*.json text eol=lf
+*.log text eol=lf
+*.txt text eol=lf
+LICENSE-SAM text eol=lf
+.gitignore text eol=lf
+.gitattributes text eol=lf

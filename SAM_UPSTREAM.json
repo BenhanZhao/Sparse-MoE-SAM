@@ -1,0 +1,23 @@
+{
+  "commit": "dca509fe793f601edb92606367a655c15ac00fdf",
+  "repository": "https://github.com/facebookresearch/segment-anything",
+  "local_changes": [
+    "predictor.py: package-relative Sam import",
+    "build_sam.py: legacy clustering re-exports and safe CPU checkpoint loading",
+    "all listed source files: LICENSE-SAM header reference and local modification notices"
+  ],
+  "files": [
+    "modeling/__init__.py",
+    "modeling/common.py",
+    "modeling/image_encoder.py",
+    "modeling/mask_decoder.py",
+    "modeling/prompt_encoder.py",
+    "modeling/sam.py",
+    "modeling/transformer.py",
+    "utils/transforms.py",
+    "utils/amg.py",
+    "predictor.py",
+    "automatic_mask_generator.py",
+    "build_sam.py"
+  ]
+}

@@ -1,0 +1,244 @@
+{
+  "architecture_version": 2,
+  "device": "NVIDIA GeForce RTX 5070",
+  "torch": "2.11.0+cu128",
+  "encoder": "vit_b",
+  "encoder_size": 1024,
+  "decoder_channels": 256,
+  "batch": 1,
+  "input_size": 256,
+  "output_shape": [
+    1,
+    1,
+    256,
+    256
+  ],
+  "amp": true,
+  "synthetic_loss": 1.4343634843826294,
+  "finite_gradients": true,
+  "gradient_parameter_tensors": 274,
+  "optimizer_step": true,
+  "optimizer_state_parameter_tensors": 274,
+  "parameters": {
+    "total": 97419068,
+    "trainable": 97419068,
+    "frozen": 0,
+    "groups": {
+      "encoder": {
+        "total": 89670912,
+        "trainable": 89670912,
+        "frozen": 0
+      },
+      "decoder": {
+        "total": 7748156,
+        "trainable": 7748156,
+        "frozen": 0
+      },
+      "other": {
+        "total": 0,
+        "trainable": 0,
+        "frozen": 0
+      }
+    },
+    "counting_method": "Unique registered parameters; buffers are excluded."
+  },
+  "settings": {
+    "model_class": "SparseMoESAM",
+    "encoder_size": 1024,
+    "encoder_variant_inferred_from_dimensions": "vit_b",
+    "encoder_embed_dim": 768,
+    "encoder_depth": 12,
+    "encoder_heads": 12,
+    "encoder_global_attention_indexes": [
+      2,
+      5,
+      8,
+      11
+    ],
+    "patch_kernel": [
+      16,
+      16
+    ],
+    "patch_stride": [
+      16,
+      16
+    ],
+    "pretrained_loaded": false,
+    "decoder_channels": 256,
+    "aspp_branch_dilations": [
+      [
+        1,
+        1
+      ],
+      [
+        6,
+        6
+      ],
+      [
+        12,
+        12
+      ],
+      [
+        18,
+        18
+      ]
+    ],
+    "lateral_indexes": [
+      2,
+      5,
+      8
+    ],
+    "lateral_projection_count": 3,
+    "refinement_se_class": "SqueezeExcitation",
+    "boundary_mode": "predicted_sdf",
+    "stage1": {
+      "num_experts": 4,
+      "top_k": 2,
+      "temperature": 0.5,
+      "noise_scale": 0.1,
+      "balance_mode": "frequency_st",
+      "dispatch_chunk_size": 4096,
+      "out_channels": 256,
+      "gate_hidden_dim": 512,
+      "gate_activation": [
+        "ReLU"
+      ],
+      "expert_types": [
+        "conv",
+        "dilated",
+        "depthwise",
+        "replica"
+      ]
+    },
+    "stage2": {
+      "num_experts": 3,
+      "top_k": 2,
+      "temperature": 0.3,
+      "noise_scale": 0.1,
+      "balance_mode": "frequency_st",
+      "dispatch_chunk_size": 4096,
+      "out_channels": 256,
+      "gate_hidden_dim": 512,
+      "gate_activation": [
+        "ReLU"
+      ],
+      "expert_types": [
+        "edge",
+        "residual",
+        "contour"
+      ]
+    },
+    "attention": [
+      {
+        "path": "image_encoder.blocks.0.attn",
+        "num_heads": 12,
+        "sparsity_ratio": 0.1,
+        "temperature": 1.0,
+        "query_chunk_size": 128
+      },
+      {
+        "path": "image_encoder.blocks.1.attn",
+        "num_heads": 12,
+        "sparsity_ratio": 0.1,
+        "temperature": 1.0,
+        "query_chunk_size": 128
+      },
+      {
+        "path": "image_encoder.blocks.2.attn",
+        "num_heads": 12,
+        "sparsity_ratio": 0.1,
+        "temperature": 1.0,
+        "query_chunk_size": 128
+      },
+      {
+        "path": "image_encoder.blocks.3.attn",
+        "num_heads": 12,
+        "sparsity_ratio": 0.1,
+        "temperature": 1.0,
+        "query_chunk_size": 128
+      },
+      {
+        "path": "image_encoder.blocks.4.attn",
+        "num_heads": 12,
+        "sparsity_ratio": 0.1,
+        "temperature": 1.0,
+        "query_chunk_size": 128
+      },
+      {
+        "path": "image_encoder.blocks.5.attn",
+        "num_heads": 12,
+        "sparsity_ratio": 0.1,
+        "temperature": 1.0,
+        "query_chunk_size": 128
+      },
+      {
+        "path": "image_encoder.blocks.6.attn",
+        "num_heads": 12,
+        "sparsity_ratio": 0.1,
+        "temperature": 1.0,
+        "query_chunk_size": 128
+      },
+      {
+        "path": "image_encoder.blocks.7.attn",
+        "num_heads": 12,
+        "sparsity_ratio": 0.1,
+        "temperature": 1.0,
+        "query_chunk_size": 128
+      },
+      {
+        "path": "image_encoder.blocks.8.attn",
+        "num_heads": 12,
+        "sparsity_ratio": 0.1,
+        "temperature": 1.0,
+        "query_chunk_size": 128
+      },
+      {
+        "path": "image_encoder.blocks.9.attn",
+        "num_heads": 12,
+        "sparsity_ratio": 0.1,
+        "temperature": 1.0,
+        "query_chunk_size": 128
+      },
+      {
+        "path": "image_encoder.blocks.10.attn",
+        "num_heads": 12,
+        "sparsity_ratio": 0.1,
+        "temperature": 1.0,
+        "query_chunk_size": 128
+      },
+      {
+        "path": "image_encoder.blocks.11.attn",
+        "num_heads": 12,
+        "sparsity_ratio": 0.1,
+        "temperature": 1.0,
+        "query_chunk_size": 128
+      },
+      {
+        "path": "decoder.aspp.sparse_attention",
+        "num_heads": 8,
+        "sparsity_ratio": 0.1,
+        "temperature": 1.0,
+        "query_chunk_size": 128
+      }
+    ]
+  },
+  "core_source_sha256": {
+    "inspect_model.py": "8067618df0635035b2200b932459ad97205f1c136e5ec7fcb4c457fee2ce5acc",
+    "losses.py": "432280d3b748953ccd7940b51b0f58bc17f3aef30a85172a0276bb0e2bc36123",
+    "modeling/__init__.py": "78ce14ffb361fdeb8331908eb1895c62dfb9b05ff1a07a7595c3ed277b5864bb",
+    "modeling/common.py": "5b6786c9dbead5dce51808ba588eebd1d6c6d328c0d273dd865634465aab1b31",
+    "modeling/image_encoder.py": "70246c83ea53d51432e74879540943116c8928cf664ae028605464ebdb0c2922",
+    "modeling/mask_decoder.py": "2989cea1276b3fa8eab84f8392763a11c66fcb3c50a48cb6c6d754580a39e392",
+    "modeling/prompt_encoder.py": "c3f1b98a794f70ea491027063b28dcd9655746fbe54405d636f66e57e5fbff20",
+    "modeling/sam.py": "adc721ccfec3aa6564784b4e36ea7a7ef66cce22e333aa93e7e1129e2ea42efc",
+    "modeling/transformer.py": "e58abf66e40e39e7ce4c6d2651f02effcf56fbcc98b85e7f713fd9fd7099da08",
+    "sam_moe.py": "f133e91abf34ed29bc18b232fa1642ea2f20fe82d9747ea87506b767e92e633c",
+    "sparse_modules.py": "c01021633c0c6ed3d137c3fe228e94377a2161e20c7812cbac23ed53a094cf99",
+    "tests/gpu_smoke.py": "892f21af18653a4ed633998bb6c7c8486640dc9683500ba7fd55727575dbf4ff"
+  },
+  "peak_allocated_mib": 2735.5400390625,
+  "single_step_seconds": 15.445446900004754,
+  "note": "Random initialization; one synthetic step, not a latency benchmark or accuracy evaluation",
+  "inference_finite": true,
+  "source_changed_during_check": false
+}
